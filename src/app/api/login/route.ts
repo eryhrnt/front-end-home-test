@@ -2,10 +2,10 @@ import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
   const formData = await req.formData();
-  const email = formData.get('email');
+  const usename = formData.get('usename');
   const password = formData.get('password');
 
-  if (email === 'test@example.com' && password === 'password') {
+  if (usename === 'testExample' && password === 'password') {
     // Redirect to articles
     return NextResponse.redirect(new URL('/articles', req.url));
   }
